@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clinic Kecantikan</title>
+    <link rel="stylesheet" type="text/css" href="../css/Apointment.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      var disabledDates = ["2021-12-28", "2021-12-19", "2021-12-25"];
+      $(function () {
+        $("#datepicker").datepicker({
+          beforeShowDay: function (date) {
+            var string = jQuery.datepicker.formatDate("yy-mm-dd", date);
+            return [disabledDates.indexOf(string) == -1];
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Navbar Kiri -->
+    <div class="Navbar">
+      <h1>Eilidh</h1>
+      <!-- Navbar Kanan -->
+      <div class="Navbar-Right">
+        <a href="../html/About.html">About us</a>
+        <a href="../html/Contact.html">Contact</a>
+        <a href="../html/Product.html">Product</a>
+        <a href="../html/Services.html">Services</a>
+        <a href="../../index.html">Home</a>
+      </div>
+    </div>
+    <!-- content -->
+    <div class="Content">
+      <h2>Making An Appointment</h2>
+      <form method="post" action="../php/crud/proses_simpan.php?action=add1">
+        <table>
+          <tr>
+            <td>Full Name</td>
+            <td>:</td>
+            <td><input type="text" size="40" name="name" /></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>:</td>
+            <td><input type="radio" name="gender" value="Laki-laki" />Laki-laki <input type="radio" name="gender" value="Perempuan" />Perempuan</td>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td>:</td>
+            <td><input type="text" id="datepicker" name="date" required /></td>
+            <!-- 
+            <td><input type="date" name="date" id="datepicker" /></td> -->
+          </tr>
+          <tr>
+            <td>E-mail</td>
+            <td>:</td>
+            <td><input type="text" size="40" name="email" required /></td>
+          </tr>
+          <tr>
+            <td>Appointment</td>
+            <td>:</td>
+            <td>
+              <select name="appointment">
+                <option value="">-- Select --</option>
+                <option value="Doctor">Doctor</option>
+                <option value="Beauty Therapist">Beauty Therapist</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Message</td>
+            <td>:</td>
+            <td><textarea rows="5" cols="75" name="message" placeholder="Enter text here..."></textarea></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <button name="Kirim" onclick="alert('Data Berhasil dikirim.!')">Submit</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

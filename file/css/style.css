@@ -1,0 +1,77 @@
+body {
+  /*background-image: url(../img/bg1.jpg);*/
+  /*background-size: cover;
+  background-position: center;*/
+  margin: 0px 10px 0px 0px;
+  padding: 0;
+}
+.Navbar {
+  margin-top: -30px;
+  padding-left: 20px;
+}
+.Navbar .icon {
+  float: left;
+  color: #5e3c30;
+  text-shadow: 2px 2px #fff;
+}
+
+.Navbar-Right ul li {
+  display: flex;
+  float: right;
+  margin-right: 23px;
+  padding-top: 30px;
+  text-shadow: 2px 2px #fff;
+}
+
+.Navbar-Right a {
+  font-size: 17px;
+  color: #5e3c30;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.Navbar-Right a:hover {
+  color: white;
+  text-shadow: 2px 2px black;
+  transform: scale(1.2);
+}
+.Content {
+  padding: 170px;
+  align-items: center;
+  text-align: center;
+  text-shadow: 2px 2px #fff;
+}
+.Content .judul1 {
+  font-size: 80px;
+  color: #5e3c30;
+}
+
+.Content .slogan {
+  font-size: 20px;
+  color: #5e3c30;
+  margin-top: -60px;
+}
+
+.Content a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  border: 2px solid #5e3c30;
+  padding: 5px;
+  text-shadow: 2px 2px #5e3c30;
+  transition: 0.8s;
+}
+
+.Content a:hover {
+  color: pink;
+  transform: scale(1.25);
+}
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -99;
+  width: 100%;
+}
